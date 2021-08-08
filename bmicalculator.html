@@ -1,0 +1,58 @@
+<html>
+<head>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+    <script src="bmi.js"></script>
+<style>
+    fieldset {
+	width: 300px;
+	margin: 25px 0 0 50px;
+	border: 1px solid #999999;
+	box-shadow: 1px 1px #cccccc;
+	padding: 10px;
+}
+
+label {
+	float: left;
+	width: 140px;
+	display: block;
+	clear: left;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px;
+}
+
+button {
+	margin-left: 150px;
+}
+
+input {
+	margin-top: 10px;
+	display: block;
+	text-align: right;
+	width: 128px;
+}
+</style>
+</head>
+<body>
+	<div>
+			<form action="none" method="post" name="bmiform">
+			<fieldset>
+			<legend>Heightand Weight</legend>
+				<label for="kgs">Weight (In KG):</label>
+				<input type="text" name="kgs" id="kgs" required/>
+				<br>
+				<label for="cm">Height (In CM):</label>
+				<input type="text" name="cm" id="cm" required/>
+				<br>
+				<button type="button" name="calculate" value="Calculate" onclick="calculateBMI()">Calculate your BMI</button>
+			</fieldset>
+			<fieldset>
+			<legend>BMI</legend>
+				<label for="bmi" id="bmi_label">Your BMI Is :</label>
+				<input type="text" name="bmi" id="bmi" readonly="readonly">
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>
